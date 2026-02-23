@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Movies- Leb Movies</title>
+
+  <!-- Keep existing styles and icons -->
+  <link rel="stylesheet" href="../CSS/movies.css">
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+  />
+
+</head>
+
+<body>
+
+  <!-- ✅ HEADER (UNCHANGED) -->
+  <div class="header">
+    <img src="../Public/images/lb.png" width="800" alt="Leb Movies Logo">
+    <div class="links">
+      <a href="home.html">Home</a>
+      <a href="movies.html" style="background-color: rgb(255, 157, 0); border-radius: 40px;">movies</a>
+      <a href="contact.html">Contact</a>
+      
+    
+    </div>
+  </div>
+
+  <!-- 🎬 TITLE -->
+  <h1 class="series-title">SERIES</h1>
+
+  <!-- 🎥 Dynamic movie grid -->
+  <div class="movies-grid" id="moviesGrid"></div>
+
+  <!-- 🧾 No movies fallback -->
+  <div id="noMovies" class="no-movies" style="display: none;">No movies found 🎞️</div>
+
+  <!-- FOOTER -->
+  <footer>
+    <hr>
+    <div class="foot">
+      <h3>Contact: 76/861896</h3>
+    </div>
+  </footer>
+<script src="../Public/js/movies.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Admin Dashboard</title>
+  <link rel="stylesheet" href="../CSS/admin-panel.css">
+  <link rel="stylesheet" href="../CSS/home.css">
+</head>
+<body>
+  
+  <!-- HEADER -->
+  <div class="header">
+    <img src="../Public/images/lb.png" width="800" alt="Leb Movies Logo">
+    <div class="links">
+      <a href="admin-home.html" >Home</a>
+    <a href="admin-panel.html" style="background-color: rgb(255, 157, 0); border-radius: 40px;">ManageActors</a>
+    
+      <a href="admin.html">ManageMovies</a>
+      
+    </div>
+  </div>
+  <h1> Admin Dashboard</h1>
+
+  <div class="tabs">
+    <button id="showUsersBtn">Manage Users</button>
+    <button id="showAdminsBtn">Manage Admins</button>
+  </div>
+
+  <div class="actions">
+    <button id="addBtn" class="add-btn">➕ Add New</button>
+  </div>
+
+  <div id="tableContainer"></div>
+
+  <!-- 🧩 نافذة منبثقة (Popup Form) -->
+  <div id="popupForm" class="popup hidden">
+    <div class="popup-content">
+      <h2 id="popupTitle">Add User/Admin</h2>
+      <input type="text" id="usernameInput" placeholder="Username" />
+      <input type="email" id="emailInput" placeholder="Email" />
+      <input type="password" id="passwordInput" placeholder="Password" />
+      <button id="savePopupBtn">💾 Save</button>
+      <button id="cancelPopupBtn">❌ Cancel</button>
+    </div>
+  </div>
+
+  <script src="../Public/js/admin-panel.js"></script>
+</body>
+</html>

@@ -1,0 +1,70 @@
+body {
+  background-color: #000;
+  color: white;
+  font-family: "Poppins", sans-serif;
+  text-align: center;
+  padding: 50px;
+}
+
+table {
+  width: 95%;
+  margin: 30px auto;
+  border-collapse: collapse;
+  background: #111;
+  border: 2px solid #ff9d00;
+  box-shadow: 0 0 30px rgba(255, 157, 0, 0.5);
+}
+
+th, td {
+  border: 1px solid #333;
+  padding: 15px;
+  font-size: 20px;
+}
+
+th {
+  background-color: #ff9d00;
+  color: black;
+}
+
+tr:hover {
+  background-color: #222;
+}
+
+button {
+  background-color: #ff9d00;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #ffa733;
+}
+
+/* Modal */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background: #111;
+  border: 2px solid #ff9d00;
+  border-radius: 20px;
+  padding: 30px;
+  width: 500px;
+  text-align: center;
+}
+
+.hidden {
+  display: none;
+}

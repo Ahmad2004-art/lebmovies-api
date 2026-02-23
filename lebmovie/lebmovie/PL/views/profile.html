@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>User Profile</title>
+  <link rel="stylesheet" href="../CSS/profile.css" />
+</head>
+<body>
+  <div class="profile-container">
+    <h1 class="title">👤 My Profile</h1>
+
+    
+    <div class="profile-image-section">
+      <img id="profileImage" src="../Public/images/default.png" alt="Profile Image" />
+      <label class="upload-btn">
+        <input type="file" id="uploadImage" accept="image/*" />
+        Change Photo
+      </label>
+    </div>
+
+    
+    <div class="info-section">
+      <label>Username</label>
+      <input type="text" id="username" readonly />
+
+      <label>Email</label>
+      <input type="email" id="email" />
+
+      <label>New Password</label>
+      <input type="password" id="password" placeholder="Enter new password" />
+
+      <div class="btn-group">
+        <button id="saveBtn" class="save-btn">💾 Save Changes</button>
+        <button id="backBtn" class="back-btn">⬅ Back</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="../Public/js/profile.js"></script>
+</body>
+</html>

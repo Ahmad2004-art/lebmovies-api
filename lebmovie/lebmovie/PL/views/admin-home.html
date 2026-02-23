@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Leb Movies - Admin Home</title>
+
+  <!-- Fonts & Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com/">
+  <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- ✅ Local CSS -->
+  <link rel="stylesheet" href="../CSS/home.css">
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <div class="header">
+    <img src="../Public/images/lb.png" width="800" alt="Leb Movies Logo">
+    <div class="links">
+      <a href="admin-home.html" style="background-color: rgb(255, 157, 0); border-radius: 40px;">Home</a>
+    
+      <a href="admin-panel.html">ManageActors</a>
+      <a href="admin.html">ManageMovies</a>
+      <button id="logoutBtn" class="logout">Logout</button>
+    </div>
+  </div>
+
+  <!-- WELCOME TITLE -->
+  <h1 id="welcomeMessage" class="welcome">
+    <span class="letter letter-1">W</span>
+    <span class="letter letter-2">E</span>
+    <span class="letter letter-3">L</span>
+    <span class="letter letter-4">C</span>
+    <span class="letter letter-5">O</span>
+    <span class="letter letter-6">M</span>
+    <span class="letter letter-7">E</span>
+    <span class="letter">&nbsp;</span>
+    <span class="letter letter-8" id="userName">ADMIN</span>
+  </h1>
+
+  <!-- LANDING PAGE -->
+  <div class="landpage">
+    <div>
+      <span>Welcome to Leb Movies (Admin)</span>
+      <h1>Top 1 Movies Management</h1>
+      <p>
+        Manage all movies and series.<br>
+        Add, edit, or delete movies easily from here.
+      </p>
+
+      <div class="landpage-input">
+        <input placeholder="Search...">
+        <button>Search</button>
+      </div>
+    </div>
+
+    <div class="landpage-image">
+      <img id="slider" src="../public/images/j1.png.jpg" alt="Landing Image">
+    </div>
+  </div>
+
+  <!-- TRENDING MOVIES -->
+  <div class="trend-movies">
+    <div>
+      <span>Trending</span>
+      <div class="trending-header">
+        <h1>Trending Movies</h1>
+      </div>
+    </div>
+    <button class="btn">View All</button>
+  </div>
+
+  <!-- MOVIE CARDS -->
+  <div class="cart">
+    <div class="moviecard">
+      <div class="imge">
+        <img src="../public/images/th (2).jpeg" alt="Avatar Movie">
+      </div>
+      <div class="moviename">
+        <div>
+          <span>Avatar</span>
+          <p>Action</p>
+        </div>
+        <div class="icone">
+          <a href="https://www.youtube.com/watch?v=d9MyW72ELq0" target="_blank">
+            <i class="fa fa-play-circle"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <hr>
+    <div class="foot">
+      <h3>Contact: 76/861896</h3>
+    </div>
+  </footer>
+
+  <!-- ✅ Local JS -->
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const logoutBtn = document.getElementById("logoutBtn");
+
+      if (logoutBtn) {
+        logoutBtn.addEventListener("click", (e) => {
+          e.preventDefault();
+
+          // ✅ احذف بيانات المستخدم
+          localStorage.removeItem("email");
+          localStorage.removeItem("role");
+
+          alert("✅ Logged out successfully!");
+          window.location.href = "login.html"; // ✅ ارجع لصفحة تسجيل الدخول
+        });
+      }
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Us - LEBMOVIES</title>
+
+  <link rel="stylesheet" href="../CSS/contact.css" />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+  />
+</head>
+
+<body>
+  <!-- ✅ HEADER -->
+  <div class="header">
+    <img src="../Public/images/lb.png" width="800" alt="Leb Movies Logo" />
+    <div class="links">
+      <a href="home.html">Home</a>
+      <a href="movies.html">Movies</a>
+      <a href="contact.html" class="active">Contact</a>
+    </div>
+  </div>
+
+  <!-- ✉️ CONTACT SECTION -->
+  <h1 class="page-title">📩 CONTACT US</h1>
+  <p class="page-subtitle">We’d love to hear from you! Send us a message and we’ll reply soon.</p>
+
+  <div class="contact-container">
+    
+    <div class="contact-image">
+      <img src="../Public/images/R.png" alt="Contact Us" />
+    </div>
+
+    
+    <div class="contact-form">
+      <form id="contactForm">
+        <input type="text" id="name" placeholder="Your Name" required />
+        <input type="email" id="email" placeholder="Your Email" required />
+        <textarea id="message" placeholder="Your Message" rows="5" required></textarea>
+
+        <label for="imageUpload" class="upload-label">
+          <i class="fa-solid fa-image"></i> Upload Image (optional)
+        </label>
+        <input type="file" id="imageUpload" accept="image/*" />
+
+        <button type="submit" id="sendBtn">
+          <i class="fa-solid fa-paper-plane"></i> Send Message
+        </button>
+      </form>
+
+      <div id="responseMsg" class="hidden"></div>
+    </div>
+  </div>
+
+
+  <script src="../Public/js/contact.js"></script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Panel - Leb Movies</title>
+  <link rel="stylesheet" href="../CSS/admin.css">
+
+  
+</head>
+<body>
+
+  <!-- HEADER -->
+  <div class="header">
+   <img src="../Public/images/lb.png" width="800" alt="Leb Movies Logo">
+
+    <div class="links">
+      <a href="admin-home.html">Home</a>
+      <a href="admin-panel.html" >ManageActors</a>
+    
+       <a href="admin.html" style="background-color: rgb(255, 157, 0); border-radius: 40px;">ManageMovies</a>
+    
+      
+    </div>
+  </div>
+
+  <!-- BIG ADMIN PANEL -->
+  <div class="admin-container">
+    <h1>🎬 ADMIN PANEL</h1>
+    <h3>Add New Movie</h3>
+    
+    <input type="text" id="title" placeholder="🎞️ Movie Title" required>
+    <input type="text" id="genre" placeholder="🎭 Genre">
+    <input type="number" id="year" placeholder="📅 Year">
+    <input type="text" id="image_url" placeholder="🖼️ Image URL">
+    <textarea id="description" placeholder="📝 Description"></textarea>
+
+    <button id="addMovieBtn">➕ Add Movie</button>
+
+    <h3>📽️ Movies List</h3>
+    <div class="movies-list" id="moviesList"></div>
+  </div>
+<script src="../Public/js/admin.js"></script>
+
+
+</body>
+</html>

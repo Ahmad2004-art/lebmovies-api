@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login - Leb Movies</title>
+
+  <!-- Fonts & Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+  <!-- ✅ Local CSS -->
+  <link rel="stylesheet" href="../CSS/login.css">
+</head>
+
+<body>
+  <header class="header">
+    <img src="../Public/images/lb.png" width="800" alt="Leb Movies Logo" />
+    <nav class="links">
+      <a href="home.html">Home</a>
+      <a href="movies.html">movies</a>
+      <a href="#">Contact</a>
+      <a href="login.html" style="background-color: rgb(255, 157, 0); border-radius: 40px;">Login</a>
+    </nav>
+  </header>
+
+  <main class="login-container">
+    <div class="wrapper">
+      <h1>Login</h1>
+      <form id="loginForm" novalidate>
+        <div class="input-box">
+         
+          <input type="text" name="email" placeholder="Email or Username" required autocomplete="username" />
+        </div>
+        <div class="input-box">
+          <input type="password" name="password" placeholder="Password" required autocomplete="current-password" />
+        </div>
+        <button type="submit" class="btn">Login</button>
+        <div class="register-link">
+          <p>Don’t have an account? <a href="register.html">Register</a></p>
+        </div>
+      </form>
+    </div>
+  </main>
+
+  <footer>
+    <div class="foot">
+      <h3>Contact: 76/861896</h3>
+    </div>
+  </footer>
+
+  <script src="../Public/js/login.js"></script>
+</body>
+</html>
