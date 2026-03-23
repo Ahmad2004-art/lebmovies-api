@@ -1,7 +1,7 @@
 import db from "./DBconnection.js";
 
 const contactAdminRepository = {
-  // ✅ جلب جميع الرسائل
+  
   getAllMessages: async () => {
     const [rows] = await db.query(`
       SELECT c.id, c.name, c.email, c.message, c.image_url, c.created_at,
@@ -12,12 +12,10 @@ const contactAdminRepository = {
     return rows;
   },
 
-  // ✅ حذف رسالة
   deleteMessage: async (id) => {
     await db.query("DELETE FROM contact_messages WHERE id = ?", [id]);
   },
 
-  // ✅ إرسال رد
   sendReply: async (message_id, admin_email, reply_text) => {
     await db.query(
       "INSERT INTO contact_replies (message_id, admin_email, reply_text) VALUES (?, ?, ?)",
