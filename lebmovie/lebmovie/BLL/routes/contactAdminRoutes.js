@@ -3,7 +3,6 @@ import contactAdminManager from "../managers/contactAdminManager.js";
 
 const router = express.Router();
 
-// ✅ جلب جميع الرسائل
 router.get("/all", async (req, res) => {
   try {
     const data = await contactAdminManager.getAllMessages();
@@ -13,7 +12,6 @@ router.get("/all", async (req, res) => {
   }
 });
 
-// ✅ حذف رسالة
 router.delete("/:id", async (req, res) => {
   try {
     await contactAdminManager.deleteMessage(req.params.id);
@@ -23,7 +21,6 @@ router.delete("/:id", async (req, res) => {
   }
 });
 
-// ✅ إرسال رد
 router.post("/reply", async (req, res) => {
   try {
     const { message_id, admin_email, reply_text } = req.body;
