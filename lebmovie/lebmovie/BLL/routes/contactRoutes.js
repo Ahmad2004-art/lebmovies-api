@@ -6,12 +6,10 @@ import contactManager from "../managers/contactManager.js";
 
 const router = express.Router();
 
-// 🧭 لمعرفة المسار الأساسي للمشروع
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
-const projectRoot = path.resolve(__dirname, "../../"); // يصعد 3 مجلدات للخروج من backend/BLL/routes
+const projectRoot = path.resolve(__dirname, "../../");
 
-// 🗂️ إعداد تخزين الصور في PL/Public/images
 const storage = multer.diskStorage({
   destination: (req, file, cb) => {
     cb(null, path.join(projectRoot, "PL/Public/images"));
@@ -24,7 +22,6 @@ const storage = multer.diskStorage({
 
 const upload = multer({ storage });
 
-// ✅ إرسال رسالة جديدة
 router.post("/", upload.single("image"), async (req, res) => {
   try {
     const { name, email, message } = req.body;
@@ -40,7 +37,6 @@ router.post("/", upload.single("image"), async (req, res) => {
   }
 });
 
-// ✅ جلب كل الرسائل
 router.get("/all", async (req, res) => {
   try {
     const data = await contactManager.getAllMessages();
@@ -50,7 +46,6 @@ router.get("/all", async (req, res) => {
   }
 });
 
-// ✅ حذف رسالة
 router.delete("/:id", async (req, res) => {
   try {
     const { id } = req.params;
