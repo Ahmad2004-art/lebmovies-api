@@ -3,7 +3,6 @@ import adminPanelManager from "../../BLL/managers/adminPanelManager.js";
 
 const router = express.Router();
 
-// ✅ Get all (users or admins)
 router.get("/:type", async (req, res) => {
   try {
     const { type } = req.params;
@@ -19,7 +18,6 @@ router.get("/:type", async (req, res) => {
   }
 });
 
-// ✅ Get by ID
 router.get("/:type/:id", async (req, res) => {
   try {
     const { type, id } = req.params;
@@ -35,7 +33,6 @@ router.get("/:type/:id", async (req, res) => {
   }
 });
 
-// ✅ Create new record
 router.post("/:type", async (req, res) => {
   try {
     const { type } = req.params;
@@ -52,7 +49,6 @@ router.post("/:type", async (req, res) => {
   }
 });
 
-// ✅ Update record
 router.put("/:type/:id", async (req, res) => {
   try {
     const { type, id } = req.params;
@@ -69,7 +65,6 @@ router.put("/:type/:id", async (req, res) => {
   }
 });
 
-// ✅ Delete record
 router.delete("/:type/:id", async (req, res) => {
   try {
     const { type, id } = req.params;
@@ -85,5 +80,4 @@ router.delete("/:type/:id", async (req, res) => {
   }
 });
 
-// ✅ لازم يكون في النهاية
 export default router;
